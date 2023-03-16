@@ -1,0 +1,1 @@
+<p>Mood item created successfully.</p>
