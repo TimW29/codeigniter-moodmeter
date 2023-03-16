@@ -11,7 +11,7 @@
     <br>
 
     <label for="mood">Mood</label>
-    <textarea name="mood" cols="45" rows="4"><?= set_value('mood') ?></textarea>
+    <textarea name="mood" cols="4" rows="1"><?= set_value('mood') ?></textarea>
     <br>
 
     <select name="plekken" id="mood">
@@ -19,6 +19,8 @@
         <option <?= set_value('plekken') ?>>werk</option>
         <option <?= set_value('plekken') ?>>thuis</option>
     </select>
+
+    <br>
 
     <input type="submit" name="submit" value="Create mood item">
 </form>
