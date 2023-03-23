@@ -77,48 +77,33 @@
 
 <?php endif ?>
 
-<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+<div id="piechart" style="width: 900px; height: 500px;"></div>
 
-Your browser does not support the HTML5 canvas tag.</canvas>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
 
-<script>
+      function drawChart() {
 
-var c = document.getElementById("myCanvas");
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
 
-var ctx = c.getContext("2d");
+        var options = {
+          title: 'My Daily Activities'
+        };
 
-ctx.beginPath();
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
-ctx.fillStyle = "#00ffaa";
-
-ctx.arc(100, 75, 50, 0*Math.PI, 1.2* Math.PI);
-
-ctx.lineTo(100,75);
-
-ctx.fill();
-
-ctx.beginPath();
-
-ctx.fillStyle = "#00aaaa";
-
-ctx.arc(100, 75, 50, 1.2*Math.PI, 1.6* Math.PI);
-
-ctx.lineTo(100,75);
-
-ctx.fill();
-
-ctx.beginPath();
-
-ctx.fillStyle = "#00ffff";
-
-ctx.arc(100, 75, 50, 1.6*Math.PI, 2* Math.PI);
-
-ctx.lineTo(100,75);
-
-ctx.fill();
-
-</script>
-
+        chart.draw(data, options);
+      }
+    </script>
 <?php 
 
 // $result= mysql_query("SELECT AVG(mood) AS average FROM mood");
