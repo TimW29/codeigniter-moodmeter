@@ -77,6 +77,48 @@
 
 <?php endif ?>
 
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+
+var c = document.getElementById("myCanvas");
+
+var ctx = c.getContext("2d");
+
+ctx.beginPath();
+
+ctx.fillStyle = "#00ffaa";
+
+ctx.arc(100, 75, 50, 0*Math.PI, 1.2* Math.PI);
+
+ctx.lineTo(100,75);
+
+ctx.fill();
+
+ctx.beginPath();
+
+ctx.fillStyle = "#00aaaa";
+
+ctx.arc(100, 75, 50, 1.2*Math.PI, 1.6* Math.PI);
+
+ctx.lineTo(100,75);
+
+ctx.fill();
+
+ctx.beginPath();
+
+ctx.fillStyle = "#00ffff";
+
+ctx.arc(100, 75, 50, 1.6*Math.PI, 2* Math.PI);
+
+ctx.lineTo(100,75);
+
+ctx.fill();
+
+</script>
+
 <?php 
 
 // $result= mysql_query("SELECT AVG(mood) AS average FROM mood");
