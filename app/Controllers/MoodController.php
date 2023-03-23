@@ -13,7 +13,7 @@ class MoodController extends BaseController
 
         $data = [
             'mood'  => $model->getMood(),
-            'title' => 'Jou moods',
+            'title' => 'Jouw moods',
         ];
 
         return view('templates/header', $data)
