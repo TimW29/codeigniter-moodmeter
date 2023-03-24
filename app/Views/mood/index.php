@@ -79,6 +79,17 @@
 
 <div id="piechart" style="width: 900px; height: 500px;"></div>
 
+
+<?php 
+
+// $result= mysql_query("SELECT AVG(mood) AS average FROM mood");
+
+// $row = mysql_fetch_assoc($result); 
+
+// $average = $row['average'];
+
+// echo ("This is the average: $average");
+?>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
@@ -104,15 +115,4 @@
         chart.draw(data, options);
       }
     </script>
-<?php 
-
-// $result= mysql_query("SELECT AVG(mood) AS average FROM mood");
-
-// $row = mysql_fetch_assoc($result); 
-
-// $average = $row['average'];
-
-// echo ("This is the average: $average");
-
-?>
 </body>
