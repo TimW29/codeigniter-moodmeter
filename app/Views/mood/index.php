@@ -37,8 +37,8 @@
                 <?php echo $mood[$id]->mood == NULL ? 'lightblue' : ''; ?>
                 <?php echo $mood[$id]->mood == 1 ? 'orangered' : ''; ?>
                 <?php echo $mood[$id]->mood == 2 ? 'orangered' : ''; ?>
-                <?php echo $mood[$id]->mood == 3 ? 'gold' : ''; ?>
-                <?php echo $mood[$id]->mood == 4 ? 'gold' : ''; ?>
+                <?php echo $mood[$id]->mood == 3 ? 'orangered' : ''; ?>
+                <?php echo $mood[$id]->mood == 4 ? 'orange' : ''; ?>
                 <?php echo $mood[$id]->mood == 5 ? 'orange' : ''; ?>
                 <?php echo $mood[$id]->mood == 6 ? 'orange' : ''; ?>
                 <?php echo $mood[$id]->mood == 7 ? 'lightgreen' : ''; ?>
