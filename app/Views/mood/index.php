@@ -17,12 +17,15 @@
         visibility: hidden;
     }
 </style>
+<?php include 'navbar.php'?>
 <body>
+    
 
 <h2><?= esc($title) ?></h2>
 
 <?php if (! empty($mood) && is_array($mood)): ?>
 
+    <!-- Dit laat de moods zien -->
     <?php 
         for ($id = 0; $id < count($mood); $id++):
         // foreach ($mood as $mood_item): ?>
@@ -33,17 +36,17 @@
 
         <div class="main">
                 <h3 style="background-color:
-                <?php echo $mood[$id]->mood == NULL ? 'blue' : ''; ?>
-                <?php echo $mood[$id]->mood == 1 ? 'red' : ''; ?>
-                <?php echo $mood[$id]->mood == 2 ? 'red' : ''; ?>
-                <?php echo $mood[$id]->mood == 3 ? 'yellow' : ''; ?>
-                <?php echo $mood[$id]->mood == 4 ? 'yellow' : ''; ?>
+                <?php echo $mood[$id]->mood == NULL ? 'lightblue' : ''; ?>
+                <?php echo $mood[$id]->mood == 1 ? 'orangered' : ''; ?>
+                <?php echo $mood[$id]->mood == 2 ? 'orangered' : ''; ?>
+                <?php echo $mood[$id]->mood == 3 ? 'orangered' : ''; ?>
+                <?php echo $mood[$id]->mood == 4 ? 'orange' : ''; ?>
                 <?php echo $mood[$id]->mood == 5 ? 'orange' : ''; ?>
                 <?php echo $mood[$id]->mood == 6 ? 'orange' : ''; ?>
-                <?php echo $mood[$id]->mood == 7 ? 'green' : ''; ?>
-                <?php echo $mood[$id]->mood == 8 ? 'green' : ''; ?>
-                <?php echo $mood[$id]->mood == 9 ? 'green' : ''; ?>
-                <?php echo $mood[$id]->mood == 10 ? 'green' : ''; ?>;">
+                <?php echo $mood[$id]->mood == 7 ? 'lightgreen' : ''; ?>
+                <?php echo $mood[$id]->mood == 8 ? 'lightgreen' : ''; ?>
+                <?php echo $mood[$id]->mood == 9 ? 'lightgreen' : ''; ?>
+                <?php echo $mood[$id]->mood == 10 ? 'lightgreen' : ''; ?>;">
                 <label for="mood"> Je mood:</label>
                 <?php 
                 if($mood[$id]->mood == NULL)
@@ -77,6 +80,8 @@
 
 <?php endif ?>
 
+<br>
+
 <div id="piechart" style="width: 900px; height: 500px;"></div>
 
 
@@ -98,16 +103,14 @@
       function drawChart() {
 
         var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
+          <?php 
+            echo "['school',15],";
+            echo "['thuis',20],";
+        ?>
         ]);
 
         var options = {
-          title: 'My Daily Activities'
+          title: 'De moods'
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));

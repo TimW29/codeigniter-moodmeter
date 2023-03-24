@@ -6,7 +6,7 @@ use App\Models\MoodModel;
 
 class MoodController extends BaseController
 {
-    
+    // laat de moods zien
     public function index()
     {
         $model = model(MoodModel::class);
@@ -38,6 +38,7 @@ class MoodController extends BaseController
     //         . view('templates/footer');
     // }
 
+    // zorgt ervoor dat je een mood kan creëren
     public function create()
     {
         helper('form');

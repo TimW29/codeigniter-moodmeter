@@ -30,7 +30,7 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/', [MoodController::class, 'index']);
 $routes->match(['get', 'post'], 'mood/create', [MoodController::class, 'create']);
 $routes->get('mood/(:segment)', [MoodController::class, 'view']);
 $routes->get('mood', [MoodController::class, 'index']);
