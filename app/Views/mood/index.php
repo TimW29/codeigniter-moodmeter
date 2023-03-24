@@ -34,17 +34,17 @@
 
         <div class="main">
                 <h3 style="background-color:
-                <?php echo $mood[$id]->mood == NULL ? 'blue' : ''; ?>
-                <?php echo $mood[$id]->mood == 1 ? 'red' : ''; ?>
-                <?php echo $mood[$id]->mood == 2 ? 'red' : ''; ?>
-                <?php echo $mood[$id]->mood == 3 ? 'yellow' : ''; ?>
-                <?php echo $mood[$id]->mood == 4 ? 'yellow' : ''; ?>
+                <?php echo $mood[$id]->mood == NULL ? 'lightblue' : ''; ?>
+                <?php echo $mood[$id]->mood == 1 ? 'orangered' : ''; ?>
+                <?php echo $mood[$id]->mood == 2 ? 'orangered' : ''; ?>
+                <?php echo $mood[$id]->mood == 3 ? 'gold' : ''; ?>
+                <?php echo $mood[$id]->mood == 4 ? 'gold' : ''; ?>
                 <?php echo $mood[$id]->mood == 5 ? 'orange' : ''; ?>
                 <?php echo $mood[$id]->mood == 6 ? 'orange' : ''; ?>
-                <?php echo $mood[$id]->mood == 7 ? 'green' : ''; ?>
-                <?php echo $mood[$id]->mood == 8 ? 'green' : ''; ?>
-                <?php echo $mood[$id]->mood == 9 ? 'green' : ''; ?>
-                <?php echo $mood[$id]->mood == 10 ? 'green' : ''; ?>;">
+                <?php echo $mood[$id]->mood == 7 ? 'lightgreen' : ''; ?>
+                <?php echo $mood[$id]->mood == 8 ? 'lightgreen' : ''; ?>
+                <?php echo $mood[$id]->mood == 9 ? 'lightgreen' : ''; ?>
+                <?php echo $mood[$id]->mood == 10 ? 'lightgreen' : ''; ?>;">
                 <label for="mood"> Je mood:</label>
                 <?php 
                 if($mood[$id]->mood == NULL)
@@ -82,7 +82,7 @@
 
 <a href="http://localhost:8080/mood/create">creër een mood</a>
 
-<!-- <div id="piechart" style="width: 900px; height: 500px;"></div>
+<div id="piechart" style="width: 900px; height: 500px;"></div>
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -92,12 +92,10 @@
       function drawChart() {
 
         var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
+          <?php 
+            echo "['school',15],";
+            echo "['thuis',20],";
+        ?>
         ]);
 
         var options = {
@@ -108,7 +106,7 @@
 
         chart.draw(data, options);
       }
-    </script> -->
+    </script>
 <?php 
 
 // $result= mysql_query("SELECT AVG(mood) AS average FROM mood");
