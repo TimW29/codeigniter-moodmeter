@@ -17,7 +17,9 @@
         visibility: hidden;
     }
 </style>
+<?php include 'navbar.php'?>
 <body>
+    
 
 <h2><?= esc($title) ?></h2>
 
@@ -79,8 +81,6 @@
 <?php endif ?>
 
 <br>
-
-<a href="http://localhost:8080/mood/create">creër een mood</a>
 
 <div id="piechart" style="width: 900px; height: 500px;"></div>
 

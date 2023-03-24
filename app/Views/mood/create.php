@@ -1,3 +1,4 @@
+<?php include 'navbar.php'?>
 <h2><?= esc($title) ?></h2>
 
 <?= session()->getFlashdata('error') ?>
