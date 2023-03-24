@@ -17,7 +17,6 @@
         visibility: hidden;
     }
 </style>
-<?php include 'navbar.php'?>
 <body>
     
 
