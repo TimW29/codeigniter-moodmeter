@@ -77,7 +77,11 @@
 
 <?php endif ?>
 
-<div id="piechart" style="width: 900px; height: 500px;"></div>
+<br>
+
+<a href="http://localhost:8080/mood/create">creër een mood</a>
+
+<!-- <div id="piechart" style="width: 900px; height: 500px;"></div>
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -103,7 +107,7 @@
 
         chart.draw(data, options);
       }
-    </script>
+    </script> -->
 <?php 
 
 // $result= mysql_query("SELECT AVG(mood) AS average FROM mood");
