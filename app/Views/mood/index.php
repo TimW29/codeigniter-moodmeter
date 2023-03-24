@@ -23,6 +23,7 @@
 
 <?php if (! empty($mood) && is_array($mood)): ?>
 
+    <!-- Dit laat de moods zien -->
     <?php 
         for ($id = 0; $id < count($mood); $id++):
         // foreach ($mood as $mood_item): ?>

@@ -10,6 +10,7 @@ class MoodModel extends Model
 
     protected $allowedFields = ['datum', 'mood','user','plekken'];
 
+    // Zorgt ervoor dat de moods ordered zijn
     public function getMood()
     {
         $user = auth()->user();
