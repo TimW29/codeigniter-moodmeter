@@ -101,7 +101,7 @@
         ]);
 
         var options = {
-          title: 'My Daily Activities'
+          title: 'De moods'
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
